@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.friends {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+.friends img {
+  width: 50px;
+  padding: 10px;
+  background: white;
+  border-radius: 100%;
+  border: 2px solid #17a2f2;
+}
+
+.friendCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 18px 20px;
+  font-weight: bold;
+}
+
+.friendCard:hover {
+  background-color: #17a2f2;
+  transition: 0.35s;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+}
+
+.add-new-message {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+}
+
+.empty {
+  width: 100%;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #17a2f2;
+  border-radius: 8px;
+  border: 2px groove #ffffff;
+}
+
+.filter {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.filter i {
+  color: #17a2f2;
+}
+
+.fa-twitter {
+  padding-left: 20px;
+  padding-right: 140px;
+}
+
+.input-text {
+  height: 80px;
+}
+
+.input-sender {
+  height: 25px;
+}
+
+.add-new-message-btn {
+  background-color: #17a2f2;
+  color: #fff;
+  width: 80px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bolder;
+}
+
+.add-new-message-btn:hover,
+.deleteButton:hover,
+.messageCard i:hover {
+  cursor: pointer;
+  transition: 0.35s;
+  transform: scale(1.1);
+}
+
+.messageCard {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid #17a2f2;
+  padding: 10px 20px;
+  margin: 0 15px;
+}
+
+.messageCard i {
+  color: #17a2f2;
+}
+
+.deleteButton {
+  background-color: #17a2f2;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bolder;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    margin: 8px;
+  }
+
+  a {
+    padding: 5px;
+  }
+
+  .imgNav {
+    width: 100%;
+    height: 100%;
+  }
+
+  .filter {
+    margin-top: 40px;
+  }
+
+  .friends {
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .friendCard {
+    flex-direction: row;
+    border: 1px solid #fff;
+    justify-content: center;
+  }
+
+  .messages {
+    width: 33%;
+    flex-grow: 1;
+  }
+
+  .empty {
+    width: 25%;
+  }
+}
