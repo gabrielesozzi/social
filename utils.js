@@ -60,7 +60,7 @@ const createMessageEl = (
   wrapper.setAttribute("id", id);
   textPar.textContent = text;
   senderPar.textContent = sender;
-  dataPar.textContent = date.split("T")[0].split("-").reverse().join("-");
+  // dataPar.textContent = date.split("T")[0].split("-").reverse().join("-");
   deleteButton.textContent = "Elimina";
   deleteButton.className = "deleteButton";
   liked.innerHTML = `<i class="fa-solid fa-heart"></i>`;

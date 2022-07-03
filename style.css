@@ -2,12 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #fff;
 }
 
 body {
   display: flex;
   flex-direction: column;
+}
+
+nav {
+  margin-bottom: 18px;
 }
 
 .friends {
@@ -40,13 +43,7 @@ body {
 .friendCard:hover {
   background-color: #17a2f2;
   transition: 0.35s;
-}
-
-.messages {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  width: 100%;
+  color: #fff;
 }
 
 .add-new-message {
@@ -54,10 +51,6 @@ body {
   flex-direction: column;
   gap: 6px;
   padding: 20px;
-}
-
-.empty {
-  width: 100%;
 }
 
 *::-webkit-scrollbar {
@@ -88,6 +81,7 @@ body {
 .fa-twitter {
   padding-left: 20px;
   padding-right: 140px;
+  font-size: 40px;
 }
 
 .input-text {
@@ -95,7 +89,23 @@ body {
 }
 
 .input-sender {
-  height: 25px;
+  height: 30px;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+input:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+input:focus:-moz-placeholder {
+  opacity: 0;
 }
 
 .add-new-message-btn {
@@ -136,21 +146,50 @@ body {
   font-weight: bolder;
 }
 
+.messages {
+  width: 95vw;
+  border: 1px solid #17a2f2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .messages-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
 }
 
-@media only screen and (min-width: 767px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
+.dark-mode {
+  background-color: #202124;
+  color: #fff;
+  transition: 0.5s;
+}
 
+.dark-mode .moon-icon,
+.sun-icon {
+  display: none;
+  color: #737eac;
+}
+
+.dark-mode .sun-icon {
+  display: inline;
+}
+
+.moon-icon,
+.sun-icon {
+  cursor: pointer;
+}
+
+.sun-icon i {
+  color: #d8c658;
+}
+@media only screen and (min-width: 767px) {
   main {
     display: flex;
-    flex-direction: row;
   }
 
   .logo {
@@ -171,24 +210,19 @@ body {
   }
 
   .friends {
-    width: 25%;
+    width: 20vw;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
   }
 
   .friendCard {
-    flex-direction: row;
     border: 1px solid #fff;
-    justify-content: center;
+    align-items: flex-start;
   }
 
   .messages {
-    width: 33%;
-    flex-grow: 1;
-  }
-
-  .empty {
-    width: 25%;
+    width: 80vw;
+    margin: 100px;
   }
 }

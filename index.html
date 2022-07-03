@@ -13,20 +13,25 @@
     ></script>
   </head>
   <body>
-    <main>
-      <nav>
-        <div class="filter">
-          <input
-            type="text"
-            class="filter-input"
-            id="filter-input"
-            placeholder="Cerca i tweet di... "
-          />
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-solid fa-star"></i>
+    <nav>
+      <div class="filter">
+        <input
+          type="text"
+          class="filter-input"
+          id="filter-input"
+          placeholder="Cerca i tweet di... "
+        />
+        <i class="fa-brands fa-twitter"></i>
+        <div class="darkLightMode">
+          <span class="moon-icon">
+            <i class="fas fa-moon fa-2x"></i>
+            Dark
+          </span>
+          <span class="sun-icon"> <i class="fas fa-sun fa-2x"></i> Light </span>
         </div>
-      </nav>
-
+      </div>
+    </nav>
+    <main>
       <section class="friends"></section>
 
       <section class="messages">
@@ -37,6 +42,7 @@
             id="input-text"
             placeholder="What's happening?"
           />
+
           <input
             type="text"
             class="input-sender"

@@ -16,6 +16,12 @@ const filterInput = q(".filter-input");
 const messagesListEl = q(".messages-list");
 const emptyEl = q(".empty");
 
+const dark = q(".darkLightMode");
+const body = q("body");
+dark.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+});
+
 // Friends
 GET("https://edgemony-backend.herokuapp.com/friends").then((friendList) => {
   friendList.map((friend) =>
@@ -31,7 +37,7 @@ GET("https://edgemony-backend.herokuapp.com/messages").then((messagesList) => {
         location.reload()
       );
     })
-  ); // Questo è identico a quello che succede in riga 11
+  );
 });
 
 inputTextEl.addEventListener(
@@ -65,6 +71,8 @@ addMsgBtn.addEventListener("click", () => {
         }
       )
     );
+  document.querySelector(".input-text").value = "";
+  document.querySelector(".input-sender").value = "";
 });
 
 filterInput.addEventListener("input", (e) => {
@@ -81,7 +89,7 @@ filterInput.addEventListener("input", (e) => {
         )
         .map(({ text, sender, date, id }) =>
           createMessageEl(messagesListEl, id, text, sender, date)
-        ); // Questo è identico a quello che succede in riga 11
+        );
     }
   );
 });
